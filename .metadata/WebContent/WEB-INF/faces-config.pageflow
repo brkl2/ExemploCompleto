@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14657418432920" configfile="/ExemploCompleto/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="Pessoa2" x="122" y="178" id="pf14660191435170" referenceLink="//@navigationRule.0/@fromViewId|" path="/Pessoa2.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="Login" x="122" y="562" id="pf14660348193976" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf15286793088660 pf15286793088661 pf15286793088662" path="/Login.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="Pessoa" x="122" y="946" id="pf14660349791769" referenceLink="//@navigationRule.1/@navigationCase.1/@toViewId|" path="/Login.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="restrito/BemVindo" x="122" y="1330" id="pf14660428096354" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" path="/restrito/BemVindo.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="restrito/Excluir" x="122" y="1714" id="pf14660428096355" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" path="/restrito/Excluir.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="Adm.html" x="338" y="178" id="pf15286793088663" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf15286793088660" path="Adm.html"/>
+  <nodes xsi:type="pageflow:PFPage" name="Erro" x="338" y="562" id="pf15286793088664" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" inlinks="pf15286793088661" path="Erro.html"/>
+  <nodes xsi:type="pageflow:PFPage" name="Bemvindo.html" x="338" y="946" id="pf15286793088665" referenceLink="//@navigationRule.0/@navigationCase.2/@toViewId|" inlinks="pf15286793088662" path="Bemvindo.html"/>
+  <links id="pf15286793088660" target="pf15286793088663" source="pf14660348193976" outcome="admLogado" fromaction="#{pessoaController.autenticar}"/>
+  <links id="pf15286793088661" target="pf15286793088664" source="pf14660348193976" outcome="erro" fromaction="#{pessoaController.autenticar}"/>
+  <links id="pf15286793088662" target="pf15286793088665" source="pf14660348193976" outcome="pessoaLogada" fromaction="#{pessoaController.autenticar}"/>
+</pageflow:Pageflow>
